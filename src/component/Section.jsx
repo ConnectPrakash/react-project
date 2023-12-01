@@ -1,7 +1,12 @@
 import React from 'react';
 import Header from './Header';
+import { isClickableInput } from '@testing-library/user-event/dist/utils';
 
-function Section({first}) {
+function Section(props) {
+    const handleEvent = (event) => {
+        event.currentTarget.disabled = true;
+        props.first(props.second + 1);
+    }
   
   return (
       <div>
@@ -21,12 +26,11 @@ function Section({first}) {
                            
                           $40.00 - $80.00
                       </div>
-                  </div>
-                      <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
-                                      first(first+1)
-                                  }}>View options</a></div>
-                  </div>
+                              </div>
+                           
+                                  <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={handleEvent}>View options</a></div>
+                                  </div>
               </div>
           </div>
           <div className="col mb-5">
@@ -52,7 +56,9 @@ function Section({first}) {
                       </div>
                   </div>
                       <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>Add to cart</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>Add to cart</a></div>
                   </div>
               </div>
           </div>
@@ -71,7 +77,9 @@ function Section({first}) {
                       </div>
                   </div>
                       <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>Add to cart</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>Add to cart</a></div>
                   </div>
               </div>
           </div>
@@ -97,7 +105,9 @@ function Section({first}) {
                       </div>
                   </div>
                       <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>Add to cart</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>Add to cart</a></div>
                   </div>
               </div>
           </div>
@@ -117,7 +127,9 @@ function Section({first}) {
                   </div>
                   {/* <!-- Product actions--> */}
                   <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>Add to cart</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>Add to cart</a></div>
                   </div>
               </div>
           </div>
@@ -136,7 +148,9 @@ function Section({first}) {
                   </div>
                   {/* <!-- Product actions--> */}
                   <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>View options</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>View options</a></div>
                   </div>
               </div>
           </div>
@@ -163,7 +177,9 @@ function Section({first}) {
                       </div>
                   </div>
                       <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>Add to cart</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>Add to cart</a></div>
                   </div>
               </div>
           </div>
@@ -190,7 +206,9 @@ function Section({first}) {
                   </div>
                   {/* <!-- Product actions--> */}
                   <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                      <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={" "}>Add to cart</a></div>
+                                  <div className="text-center"><a className="btn btn-outline-dark mt-auto" onClick={() => {
+                                      props.first(props.second + 1);
+                                  }}>Add to cart</a></div>
                   </div>
                           </div>
                       </div>

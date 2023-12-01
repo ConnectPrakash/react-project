@@ -4,7 +4,7 @@ import Section from '../component/Section';
 import './App.css';
 
 function App() {
-    const [first, setfirst] = useState('0');
+    const [first, setfirst] = useState(0);
     return (
     <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -38,7 +38,7 @@ function App() {
           </nav> 
           <Header />
          
-            <Section first={setfirst} />
+            <Section first={setfirst} second={first} />
              </div>       
          
   )
