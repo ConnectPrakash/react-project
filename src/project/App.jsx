@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../component/Header';
 import Section from '../component/Section';
-import './App.css'
+import './App.css';
 
 function App() {
-  return (
+    const [first, setfirst] = useState('0');
+    return (
     <div>
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
               <div className="container px-4 px-lg-5">
@@ -25,24 +26,21 @@ function App() {
                           </li>
                       </ul>
                       <form className="d-flex">
+                          
                           <button className="btn btn-outline-dark" type="submit">
                               <i className="bi-cart-fill me-1"></i>
                               Cart
-                              <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
+                                <span className="badge bg-dark text-white ms-1 rounded-pill">{first}</span>
                           </button>
                       </form>
                   </div>
               </div>
           </nav> 
           <Header />
-          <section class="py-5">
-              <div class="container px-4 px-lg-5 mt-5">
-                  <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
-                      <Section />
-                      <div />
-                      <div />
-                      <section/>
-    </div>
+         
+            <Section first={setfirst} />
+             </div>       
+         
   )
 }
 
